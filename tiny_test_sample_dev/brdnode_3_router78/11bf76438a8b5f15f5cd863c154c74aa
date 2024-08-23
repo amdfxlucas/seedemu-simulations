@@ -1,0 +1,14 @@
+[general]
+id = "router78"
+config_dir = "/etc/scion"
+
+[log.console]
+level = "debug"
+
+[metrics]
+prometheus = "10.3.0.245:30442"
+
+[router]
+num_mcast_processors = 1
+
+bfd.disable=true

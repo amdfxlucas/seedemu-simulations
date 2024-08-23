@@ -1,0 +1,25 @@
+{
+
+"LinkType": {
+            "2": "multihop",
+"36": "multihop",
+"1": "multihop"
+}
+,
+
+    "Geo": {
+                   "2": {
+            "Latitude": 51.51066,
+            "Longitude": -0.10879
+        },
+        "36": {
+            "Latitude": 51.51066,
+            "Longitude": -0.10879
+        },
+        "1": {
+            "Latitude": 53.48095,
+            "Longitude": -2.23743
+        }
+           }
+
+}

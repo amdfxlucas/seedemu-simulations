@@ -1,0 +1,120 @@
+{
+
+"LinkType": {
+            "1": "multihop",
+"2": "multihop",
+"3": "multihop",
+"4": "multihop",
+"5": "multihop",
+"331": "multihop",
+"332": "multihop",
+"333": "multihop",
+"334": "multihop",
+"335": "multihop",
+"42": "multihop",
+"43": "multihop",
+"44": "multihop",
+"45": "multihop",
+"46": "multihop",
+"12": "multihop",
+"85": "multihop",
+"126": "multihop",
+"127": "multihop",
+"128": "multihop",
+"129": "multihop",
+"130": "multihop"
+}
+,
+
+    "Geo": {
+                   "1": {
+            "Latitude": 33.749,
+            "Longitude": -84.38798
+        },
+        "2": {
+            "Latitude": 1.34012669563293,
+            "Longitude": 103.996002197265
+        },
+        "3": {
+            "Latitude": 41.85003,
+            "Longitude": -87.65005
+        },
+        "4": {
+            "Latitude": 50.11552,
+            "Longitude": 8.68417
+        },
+        "5": {
+            "Latitude": 51.51066,
+            "Longitude": -0.10879
+        },
+        "331": {
+            "Latitude": 50.11552,
+            "Longitude": 8.68417
+        },
+        "332": {
+            "Latitude": 47.4313,
+            "Longitude": 8.56272
+        },
+        "333": {
+            "Latitude": 52.3025,
+            "Longitude": 4.68889
+        },
+        "334": {
+            "Latitude": 51.51066,
+            "Longitude": -0.10879
+        },
+        "335": {
+            "Latitude": 34.05223,
+            "Longitude": -118.24368
+        },
+        "42": {
+            "Latitude": 39.04372,
+            "Longitude": -77.48749
+        },
+        "43": {
+            "Latitude": 41.85003,
+            "Longitude": -87.65005
+        },
+        "44": {
+            "Latitude": 50.11552,
+            "Longitude": 8.68417
+        },
+        "45": {
+            "Latitude": 52.3025,
+            "Longitude": 4.68889
+        },
+        "46": {
+            "Latitude": 51.51066,
+            "Longitude": -0.10879
+        },
+        "12": {
+            "Latitude": 50.11552,
+            "Longitude": 8.68417
+        },
+        "85": {
+            "Latitude": 51.51066,
+            "Longitude": -0.10879
+        },
+        "126": {
+            "Latitude": 39.04372,
+            "Longitude": -77.48749
+        },
+        "127": {
+            "Latitude": 33.749,
+            "Longitude": -84.38798
+        },
+        "128": {
+            "Latitude": 52.52437,
+            "Longitude": 13.41053
+        },
+        "129": {
+            "Latitude": 42.35843,
+            "Longitude": -71.05977
+        },
+        "130": {
+            "Latitude": 51.05011,
+            "Longitude": -114.08529
+        }
+           }
+
+}

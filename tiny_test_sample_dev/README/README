@@ -1,0 +1,26 @@
+
+This simulation is generated from the 'tiny_test_sample_multi.gml' GML topology file.
+
+Which in turn is generated from the 'full_geo_rel.xml' CAIDA dataset (diameter 11)
+by selecting 5x ASes (hypothetic multicast capable )at random,
+ and adding just as much other ASes from the dataset for the graph to be connected
+ (so the 5x ASes can communicate with each other)
+ The resulting graph has only diameter 4.
+
+provider = GMLDataProvider("examples/scion/S07-multicast/tiny_test_sample_multi.gml")
+
+The mapping of real world ASN to AS-Aliases is as follows:
+'33154': 2
+'2914':  3
+'13030': 4
+'3303':  5
+'553':   6
+'42':    7
+'23467': 8
+'559':   9
+'62454': 10
+'1239':  11
+'5564':  12
+'6939':  13
+'3356':  14
+'14909': 15

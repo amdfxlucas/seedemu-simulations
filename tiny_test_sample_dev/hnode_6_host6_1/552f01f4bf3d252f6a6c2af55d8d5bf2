@@ -1,0 +1,76 @@
+{
+  "attributes": [],
+  "isd_as": "1-6",
+  "mtu": 1500,
+  "dispatched_ports": "1024-65535",
+  "control_service": {
+    "cs1": {
+      "addr": "10.6.0.71:30252"
+    }
+  },
+  "discovery_service": {
+    "cs1": {
+      "addr": "10.6.0.71:30252"
+    }
+  },
+  "multicast_service": {
+    "cs1": {
+      "addr": "10.6.0.71:30253"
+    }
+  },
+  "border_routers": {
+    "router42": {
+      "internal_addr": "10.6.0.254:30042",
+      "interfaces": {
+        "15": {
+          "underlay": {
+            "local": "10.42.0.6:50000",
+            "remote": "10.42.0.5:50003"
+          },
+          "isd_as": "1-5",
+          "link_to": "PARENT",
+          "mtu": 1500,
+          "mcast": true
+        },
+        "2": {
+          "underlay": {
+            "local": "10.42.0.6:50001",
+            "remote": "10.42.0.7:50003"
+          },
+          "isd_as": "1-7",
+          "link_to": "PEER",
+          "mtu": 1500,
+          "mcast": true,
+          "remote_interface_id": 12
+        },
+        "47": {
+          "underlay": {
+            "local": "10.42.0.6:50002",
+            "remote": "10.42.0.13:50000"
+          },
+          "isd_as": "1-13",
+          "link_to": "PEER",
+          "mtu": 1500,
+          "mcast": true,
+          "remote_interface_id": 5525
+        }
+      }
+    },
+    "router40": {
+      "internal_addr": "10.6.0.253:30042",
+      "interfaces": {
+        "1": {
+          "underlay": {
+            "local": "10.40.0.6:50000",
+            "remote": "10.40.0.14:50000"
+          },
+          "isd_as": "1-14",
+          "link_to": "PARENT",
+          "mtu": 1500,
+          "mcast": true
+        }
+      }
+    }
+  },
+  "colibri_service": {}
+}
