@@ -12,5 +12,5 @@ connection = "/cache/sd1.path.db"
 
 
 [metrics]
-prometheus = "10.3.0.249:30455"
+prometheus = "10.3.0.252:30455"
 

@@ -1,30 +1,86 @@
 {
-
-"LinkType": {
-            "15": "multihop",
-"2": "multihop",
-"47": "multihop",
-"1": "multihop"
-}
-,
-
-    "Geo": {
-                   "15": {
-            "Latitude": 50.11552,
-            "Longitude": 8.68417
-        },
-        "2": {
-            "Latitude": 50.11552,
-            "Longitude": 8.68417
-        },
-        "47": {
-            "Latitude": 50.11552,
-            "Longitude": 8.68417
-        },
-        "1": {
-            "Latitude": 48.13743,
-            "Longitude": 11.57549
-        }
-           }
-
+  "Latency": {
+    "1": {
+      "Intra": {
+        "15": "1.0166831214170542ms",
+        "2": "1.0166831214170542ms",
+        "47": "1.0166831214170542ms"
+      }
+    },
+    "2": {
+      "Intra": {
+        "1": "1.0166831214170542ms"
+      }
+    },
+    "47": {
+      "Intra": {
+        "1": "1.0166831214170542ms"
+      }
+    },
+    "15": {
+      "Intra": {
+        "1": "1.0166831214170542ms"
+      }
+    }
+  },
+  "Bandwidth": {},
+  "LinkType": {
+    "1": "direct",
+    "2": "direct",
+    "47": "direct",
+    "15": "direct"
+  },
+  "Geo": {
+    "1": {
+      "Latitude": "48.13743",
+      "Longitude": "11.57549",
+      "Address": "Marienplatz, 80331, M\u00fcnchen, Bayern, Deutschland"
+    },
+    "2": {
+      "Latitude": "50.11552",
+      "Longitude": "8.68417",
+      "Address": "Go Asia, 90, Zeil, 60313, Zeil, Frankfurt am Main, Hessen, Deutschland"
+    },
+    "47": {
+      "Latitude": "50.11552",
+      "Longitude": "8.68417",
+      "Address": "Go Asia, 90, Zeil, 60313, Zeil, Frankfurt am Main, Hessen, Deutschland"
+    },
+    "15": {
+      "Latitude": "50.11552",
+      "Longitude": "8.68417",
+      "Address": "Go Asia, 90, Zeil, 60313, Zeil, Frankfurt am Main, Hessen, Deutschland"
+    }
+  },
+  "Hops": {
+    "1": {
+      "Intra": {
+        "15": 1,
+        "2": 1,
+        "47": 1
+      }
+    },
+    "2": {
+      "Intra": {
+        "15": 0,
+        "47": 0,
+        "1": 1
+      }
+    },
+    "47": {
+      "Intra": {
+        "15": 0,
+        "2": 0,
+        "1": 1
+      }
+    },
+    "15": {
+      "Intra": {
+        "2": 0,
+        "47": 0,
+        "1": 1
+      }
+    }
+  },
+  "Note": "553"
 }

@@ -6,7 +6,7 @@ ENV CONTAINER_NODE_NAME=host14_0
 RUN apt-get update && apt-get install -y --no-install-recommends  apache2-utils apt-transport-https ca-certificates ethtool git net-tools openssh-client
 ENV PATH=/home/root/repos/scion/bin:$PATH 
 ENV PATH=$PATH:/usr/local/go/bin:/go/bin:/root/.local/protoc-26.1-linux-x86_64/bin
-ENV LIBP2P_PID="QmVNLJVnDiJvnYEktZFHdQspgK5rWXExnvts2ixqgbMxyZ"
+ENV LIBP2P_PID="12D3KooWGi496dJuxWo3Db8yGnCnwjN3cFhbSZDSLGzXpfRD5iXj"
 ENV LOCALNETADDR="10.14.0.72"
 RUN echo "deb [trusted=yes] https://packages.netsec.inf.ethz.ch/debian all main" > /etc/apt/sources.list.d/scionlab.list
 RUN mkdir -p /cache
@@ -32,6 +32,8 @@ COPY f06c79b16fde74f6214d74c13e6de9af /etc/scion/mhfa/14.json
 COPY dd2d0379efbf6cc5f77324a154dab941 /etc/scion/mhfa/15.json
 COPY 5622a57ba82a72e2df8ced035187de94 /usr/local/share/hostkeys/private-key.pem
 COPY 76e49685a0316243552d9cb83967883e /usr/local/share/hostkeys/public-key.pem
+COPY d0a8eec67a500dbf18bfb0ed4db99515 /usr/local/share/hostkeys/public-key.proto
+COPY 90b870e658c209cb2625ce59906f65d8 /usr/local/share/hostkeys/private-key.proto
 COPY e01e36443f9f72c6204189260d0bd276 /ifinfo.txt
 COPY d3d51fdf7f4bad30dc5db560a01ce629 /interface_setup
 COPY 552f01f4bf3d252f6a6c2af55d8d5bf2 /etc/scion/topology.json

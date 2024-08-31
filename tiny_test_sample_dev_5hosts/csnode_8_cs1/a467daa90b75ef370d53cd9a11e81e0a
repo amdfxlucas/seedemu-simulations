@@ -1,20 +1,36 @@
 {
-
-"LinkType": {
-            "1": "multihop",
-"2": "multihop"
-}
-,
-
-    "Geo": {
-                   "1": {
-            "Latitude": 41.85003,
-            "Longitude": -87.65005
-        },
-        "2": {
-            "Latitude": 41.85003,
-            "Longitude": -87.65005
-        }
-           }
-
+  "Latency": {
+    "1": {},
+    "2": {}
+  },
+  "Bandwidth": {},
+  "LinkType": {
+    "1": "direct",
+    "2": "direct"
+  },
+  "Geo": {
+    "1": {
+      "Latitude": "41.85003",
+      "Longitude": "-87.65005",
+      "Address": "Meade Construction, 977, West Cermak Road, 60608, West Cermak Road, Chicago, IL, United States"
+    },
+    "2": {
+      "Latitude": "41.85003",
+      "Longitude": "-87.65005",
+      "Address": "Meade Construction, 977, West Cermak Road, 60608, West Cermak Road, Chicago, IL, United States"
+    }
+  },
+  "Hops": {
+    "1": {
+      "Intra": {
+        "2": 0
+      }
+    },
+    "2": {
+      "Intra": {
+        "1": 0
+      }
+    }
+  },
+  "Note": "23467"
 }

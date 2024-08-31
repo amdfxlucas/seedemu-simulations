@@ -1,13 +1,13 @@
 FROM 39e016aa9e819f203ebc1809245a5818
 ARG DEBIAN_FRONTEND=noninteractive
-ENV CONTAINER_NAME=as13brd-router23-10.13.0.250
+ENV CONTAINER_NAME=as13brd-router23-10.13.0.244
 ENV CONTAINER_ASN=13
 ENV CONTAINER_NODE_NAME=router23
 RUN apt-get update && apt-get install -y --no-install-recommends  apache2-utils apt-transport-https ca-certificates ethtool git iptables net-tools openssh-client
 ENV PATH=/home/root/repos/scion/bin:$PATH 
 ENV PATH=$PATH:/usr/local/go/bin:/go/bin:/root/.local/protoc-26.1-linux-x86_64/bin
-ENV REALWORLDADDR="172.29.2.82"
-ENV LOCALNETADDR="10.13.0.250"
+ENV REALWORLDADDR="172.29.2.26"
+ENV LOCALNETADDR="10.13.0.244"
 RUN mkdir -p /usr/share/doc/bird2/examples/
 RUN touch /usr/share/doc/bird2/examples/bird.conf
 RUN echo "deb [trusted=yes] https://packages.netsec.inf.ethz.ch/debian all main" > /etc/apt/sources.list.d/scionlab.list

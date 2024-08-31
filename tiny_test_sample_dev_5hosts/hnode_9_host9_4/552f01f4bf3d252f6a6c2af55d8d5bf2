@@ -25,7 +25,7 @@
         "2": {
           "underlay": {
             "local": "10.41.0.9:50000",
-            "remote": "10.41.0.5:50002"
+            "remote": "10.41.0.5:50001"
           },
           "isd_as": "1-5",
           "link_to": "PEER",
@@ -45,39 +45,8 @@
         }
       }
     },
-    "router149": {
-      "internal_addr": "10.9.0.253:30042",
-      "interfaces": {
-        "8": {
-          "underlay": {
-            "local": "10.149.0.9:50000",
-            "remote": "10.149.0.4:50000"
-          },
-          "isd_as": "1-4",
-          "link_to": "PARENT",
-          "mtu": 1500,
-          "mcast": true
-        }
-      }
-    },
-    "router47": {
-      "internal_addr": "10.9.0.252:30042",
-      "interfaces": {
-        "5": {
-          "underlay": {
-            "local": "10.47.0.9:50000",
-            "remote": "10.47.0.13:50003"
-          },
-          "isd_as": "1-13",
-          "link_to": "PEER",
-          "mtu": 1500,
-          "mcast": true,
-          "remote_interface_id": 6056
-        }
-      }
-    },
     "router64": {
-      "internal_addr": "10.9.0.251:30042",
+      "internal_addr": "10.9.0.253:30042",
       "interfaces": {
         "6": {
           "underlay": {
@@ -100,6 +69,37 @@
           "mtu": 1500,
           "mcast": true,
           "remote_interface_id": 39
+        }
+      }
+    },
+    "router47": {
+      "internal_addr": "10.9.0.252:30042",
+      "interfaces": {
+        "5": {
+          "underlay": {
+            "local": "10.47.0.9:50000",
+            "remote": "10.47.0.13:50003"
+          },
+          "isd_as": "1-13",
+          "link_to": "PEER",
+          "mtu": 1500,
+          "mcast": true,
+          "remote_interface_id": 6056
+        }
+      }
+    },
+    "router149": {
+      "internal_addr": "10.9.0.251:30042",
+      "interfaces": {
+        "8": {
+          "underlay": {
+            "local": "10.149.0.9:50000",
+            "remote": "10.149.0.4:50000"
+          },
+          "isd_as": "1-4",
+          "link_to": "PARENT",
+          "mtu": 1500,
+          "mcast": true
         }
       }
     }

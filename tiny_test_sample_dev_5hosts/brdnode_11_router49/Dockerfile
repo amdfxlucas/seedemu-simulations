@@ -6,7 +6,7 @@ ENV CONTAINER_NODE_NAME=router49
 RUN apt-get update && apt-get install -y --no-install-recommends  apache2-utils apt-transport-https ca-certificates ethtool git iptables net-tools openssh-client
 ENV PATH=/home/root/repos/scion/bin:$PATH 
 ENV PATH=$PATH:/usr/local/go/bin:/go/bin:/root/.local/protoc-26.1-linux-x86_64/bin
-ENV REALWORLDADDR="172.29.0.162"
+ENV REALWORLDADDR="172.29.0.138"
 ENV LOCALNETADDR="10.11.0.254"
 RUN mkdir -p /usr/share/doc/bird2/examples/
 RUN touch /usr/share/doc/bird2/examples/bird.conf

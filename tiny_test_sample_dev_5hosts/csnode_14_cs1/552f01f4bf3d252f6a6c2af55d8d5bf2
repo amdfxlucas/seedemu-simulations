@@ -1,9 +1,9 @@
 {
   "attributes": [
-    "issuing",
-    "voting",
     "core",
-    "authoritative"
+    "authoritative",
+    "voting",
+    "issuing"
   ],
   "isd_as": "1-14",
   "mtu": 1500,
@@ -39,23 +39,8 @@
         }
       }
     },
-    "router18": {
-      "internal_addr": "10.14.0.253:30042",
-      "interfaces": {
-        "5150": {
-          "underlay": {
-            "local": "10.18.0.14:50000",
-            "remote": "10.18.0.3:50000"
-          },
-          "isd_as": "1-3",
-          "link_to": "CHILD",
-          "mtu": 1500,
-          "mcast": true
-        }
-      }
-    },
     "router51": {
-      "internal_addr": "10.14.0.252:30042",
+      "internal_addr": "10.14.0.253:30042",
       "interfaces": {
         "393": {
           "underlay": {
@@ -69,22 +54,27 @@
         }
       }
     },
-    "router23": {
-      "internal_addr": "10.14.0.251:30042",
+    "router40": {
+      "internal_addr": "10.14.0.252:30042",
       "interfaces": {
-        "5214": {
+        "42": {
           "underlay": {
-            "local": "10.23.0.14:50000",
-            "remote": "10.23.0.11:50000"
+            "local": "10.40.0.14:50000",
+            "remote": "10.40.0.6:50000"
           },
-          "isd_as": "1-11",
+          "isd_as": "1-6",
           "link_to": "CHILD",
           "mtu": 1500,
           "mcast": true
-        },
+        }
+      }
+    },
+    "router23": {
+      "internal_addr": "10.14.0.251:30042",
+      "interfaces": {
         "624": {
           "underlay": {
-            "local": "10.23.0.14:50001",
+            "local": "10.23.0.14:50000",
             "remote": "10.23.0.13:50000"
           },
           "isd_as": "1-13",
@@ -94,10 +84,20 @@
         },
         "5152": {
           "underlay": {
-            "local": "10.23.0.14:50002",
+            "local": "10.23.0.14:50001",
             "remote": "10.23.0.3:50000"
           },
           "isd_as": "1-3",
+          "link_to": "CHILD",
+          "mtu": 1500,
+          "mcast": true
+        },
+        "5214": {
+          "underlay": {
+            "local": "10.23.0.14:50002",
+            "remote": "10.23.0.11:50000"
+          },
+          "isd_as": "1-11",
           "link_to": "CHILD",
           "mtu": 1500,
           "mcast": true
@@ -110,7 +110,7 @@
         "623": {
           "underlay": {
             "local": "10.57.0.14:50000",
-            "remote": "10.57.0.13:50002"
+            "remote": "10.57.0.13:50004"
           },
           "isd_as": "1-13",
           "link_to": "CHILD",
@@ -120,7 +120,7 @@
         "5151": {
           "underlay": {
             "local": "10.57.0.14:50001",
-            "remote": "10.57.0.3:50004"
+            "remote": "10.57.0.3:50005"
           },
           "isd_as": "1-3",
           "link_to": "CHILD",
@@ -129,28 +129,13 @@
         }
       }
     },
-    "router25": {
-      "internal_addr": "10.14.0.249:30042",
-      "interfaces": {
-        "5216": {
-          "underlay": {
-            "local": "10.25.0.14:50000",
-            "remote": "10.25.0.11:50000"
-          },
-          "isd_as": "1-11",
-          "link_to": "CHILD",
-          "mtu": 1500,
-          "mcast": true
-        }
-      }
-    },
     "router31": {
-      "internal_addr": "10.14.0.248:30042",
+      "internal_addr": "10.14.0.249:30042",
       "interfaces": {
         "622": {
           "underlay": {
             "local": "10.31.0.14:50000",
-            "remote": "10.31.0.13:50001"
+            "remote": "10.31.0.13:50002"
           },
           "isd_as": "1-13",
           "link_to": "CHILD",
@@ -170,7 +155,7 @@
         "5149": {
           "underlay": {
             "local": "10.31.0.14:50002",
-            "remote": "10.31.0.3:50001"
+            "remote": "10.31.0.3:50002"
           },
           "isd_as": "1-3",
           "link_to": "CHILD",
@@ -179,30 +164,60 @@
         }
       }
     },
-    "router63": {
-      "internal_addr": "10.14.0.247:30042",
+    "router73": {
+      "internal_addr": "10.14.0.248:30042",
       "interfaces": {
-        "1619": {
+        "621": {
           "underlay": {
-            "local": "10.63.0.14:50000",
-            "remote": "10.63.0.15:50000"
+            "local": "10.73.0.14:50000",
+            "remote": "10.73.0.13:50003"
           },
-          "isd_as": "1-15",
+          "isd_as": "1-13",
           "link_to": "CHILD",
           "mtu": 1500,
           "mcast": true
         }
       }
     },
-    "router40": {
-      "internal_addr": "10.14.0.246:30042",
+    "router42": {
+      "internal_addr": "10.14.0.247:30042",
       "interfaces": {
-        "42": {
+        "625": {
           "underlay": {
-            "local": "10.40.0.14:50000",
-            "remote": "10.40.0.6:50000"
+            "local": "10.42.0.14:50000",
+            "remote": "10.42.0.13:50003"
           },
-          "isd_as": "1-6",
+          "isd_as": "1-13",
+          "link_to": "CHILD",
+          "mtu": 1500,
+          "mcast": true
+        },
+        "5188": {
+          "underlay": {
+            "local": "10.42.0.14:50001",
+            "remote": "10.42.0.5:50003"
+          },
+          "isd_as": "1-5",
+          "link_to": "CHILD",
+          "mtu": 1500,
+          "mcast": true
+        },
+        "5153": {
+          "underlay": {
+            "local": "10.42.0.14:50002",
+            "remote": "10.42.0.3:50004"
+          },
+          "isd_as": "1-3",
+          "link_to": "CHILD",
+          "mtu": 1500,
+          "mcast": true
+        },
+        "5215": {
+          "underlay": {
+            "local": "10.42.0.14:50003",
+            "remote": "10.42.0.11:50003"
+          },
+          "isd_as": "1-11",
           "link_to": "CHILD",
           "mtu": 1500,
           "mcast": true
@@ -210,12 +225,12 @@
       }
     },
     "router41": {
-      "internal_addr": "10.14.0.245:30042",
+      "internal_addr": "10.14.0.246:30042",
       "interfaces": {
         "5189": {
           "underlay": {
             "local": "10.41.0.14:50000",
-            "remote": "10.41.0.5:50000"
+            "remote": "10.41.0.5:50002"
           },
           "isd_as": "1-5",
           "link_to": "CHILD",
@@ -234,68 +249,8 @@
         }
       }
     },
-    "router42": {
-      "internal_addr": "10.14.0.244:30042",
-      "interfaces": {
-        "5215": {
-          "underlay": {
-            "local": "10.42.0.14:50000",
-            "remote": "10.42.0.11:50000"
-          },
-          "isd_as": "1-11",
-          "link_to": "CHILD",
-          "mtu": 1500,
-          "mcast": true
-        },
-        "625": {
-          "underlay": {
-            "local": "10.42.0.14:50001",
-            "remote": "10.42.0.13:50002"
-          },
-          "isd_as": "1-13",
-          "link_to": "CHILD",
-          "mtu": 1500,
-          "mcast": true
-        },
-        "5188": {
-          "underlay": {
-            "local": "10.42.0.14:50002",
-            "remote": "10.42.0.5:50004"
-          },
-          "isd_as": "1-5",
-          "link_to": "CHILD",
-          "mtu": 1500,
-          "mcast": true
-        },
-        "5153": {
-          "underlay": {
-            "local": "10.42.0.14:50003",
-            "remote": "10.42.0.3:50004"
-          },
-          "isd_as": "1-3",
-          "link_to": "CHILD",
-          "mtu": 1500,
-          "mcast": true
-        }
-      }
-    },
-    "router73": {
-      "internal_addr": "10.14.0.243:30042",
-      "interfaces": {
-        "621": {
-          "underlay": {
-            "local": "10.73.0.14:50000",
-            "remote": "10.73.0.13:50001"
-          },
-          "isd_as": "1-13",
-          "link_to": "CHILD",
-          "mtu": 1500,
-          "mcast": true
-        }
-      }
-    },
     "router47": {
-      "internal_addr": "10.14.0.242:30042",
+      "internal_addr": "10.14.0.245:30042",
       "interfaces": {
         "5190": {
           "underlay": {
@@ -310,24 +265,69 @@
       }
     },
     "router48": {
-      "internal_addr": "10.14.0.241:30042",
+      "internal_addr": "10.14.0.244:30042",
       "interfaces": {
-        "5217": {
+        "5191": {
           "underlay": {
             "local": "10.48.0.14:50000",
+            "remote": "10.48.0.5:50000"
+          },
+          "isd_as": "1-5",
+          "link_to": "CHILD",
+          "mtu": 1500,
+          "mcast": true
+        },
+        "5217": {
+          "underlay": {
+            "local": "10.48.0.14:50001",
             "remote": "10.48.0.11:50000"
           },
           "isd_as": "1-11",
           "link_to": "CHILD",
           "mtu": 1500,
           "mcast": true
-        },
-        "5191": {
+        }
+      }
+    },
+    "router18": {
+      "internal_addr": "10.14.0.243:30042",
+      "interfaces": {
+        "5150": {
           "underlay": {
-            "local": "10.48.0.14:50001",
-            "remote": "10.48.0.5:50000"
+            "local": "10.18.0.14:50000",
+            "remote": "10.18.0.3:50000"
           },
-          "isd_as": "1-5",
+          "isd_as": "1-3",
+          "link_to": "CHILD",
+          "mtu": 1500,
+          "mcast": true
+        }
+      }
+    },
+    "router25": {
+      "internal_addr": "10.14.0.242:30042",
+      "interfaces": {
+        "5216": {
+          "underlay": {
+            "local": "10.25.0.14:50000",
+            "remote": "10.25.0.11:50003"
+          },
+          "isd_as": "1-11",
+          "link_to": "CHILD",
+          "mtu": 1500,
+          "mcast": true
+        }
+      }
+    },
+    "router63": {
+      "internal_addr": "10.14.0.241:30042",
+      "interfaces": {
+        "1619": {
+          "underlay": {
+            "local": "10.63.0.14:50000",
+            "remote": "10.63.0.15:50000"
+          },
+          "isd_as": "1-15",
           "link_to": "CHILD",
           "mtu": 1500,
           "mcast": true

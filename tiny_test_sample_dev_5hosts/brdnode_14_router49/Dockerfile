@@ -18,7 +18,7 @@ RUN go install golang.org/x/tools/gopls@latest
 RUN go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 RUN go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 RUN go install github.com/go-delve/delve/cmd/dlv@latest
-ENV REALWORLDADDR="172.29.0.10"
+ENV REALWORLDADDR="172.29.0.58"
 ENV LOCALNETADDR="10.14.0.254"
 RUN mkdir -p /usr/share/doc/bird2/examples/
 RUN touch /usr/share/doc/bird2/examples/bird.conf

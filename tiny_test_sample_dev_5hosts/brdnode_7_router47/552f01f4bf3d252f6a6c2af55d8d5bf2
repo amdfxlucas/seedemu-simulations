@@ -57,7 +57,7 @@
         "3": {
           "underlay": {
             "local": "10.57.0.7:50000",
-            "remote": "10.57.0.3:50001"
+            "remote": "10.57.0.3:50000"
           },
           "isd_as": "1-3",
           "link_to": "PEER",
@@ -68,7 +68,7 @@
         "43": {
           "underlay": {
             "local": "10.57.0.7:50001",
-            "remote": "10.57.0.5:50001"
+            "remote": "10.57.0.5:50000"
           },
           "isd_as": "1-5",
           "link_to": "PEER",
@@ -84,7 +84,7 @@
         "5": {
           "underlay": {
             "local": "10.25.0.7:50000",
-            "remote": "10.25.0.3:50001"
+            "remote": "10.25.0.3:50000"
           },
           "isd_as": "1-3",
           "link_to": "PEER",
@@ -92,27 +92,27 @@
           "mcast": true,
           "remote_interface_id": 6
         },
-        "46": {
-          "underlay": {
-            "local": "10.25.0.7:50001",
-            "remote": "10.25.0.5:50001"
-          },
-          "isd_as": "1-5",
-          "link_to": "PEER",
-          "mtu": 1500,
-          "mcast": true,
-          "remote_interface_id": 14
-        },
         "334": {
           "underlay": {
-            "local": "10.25.0.7:50002",
-            "remote": "10.25.0.4:50001"
+            "local": "10.25.0.7:50001",
+            "remote": "10.25.0.4:50000"
           },
           "isd_as": "1-4",
           "link_to": "PEER",
           "mtu": 1500,
           "mcast": true,
           "remote_interface_id": 22
+        },
+        "46": {
+          "underlay": {
+            "local": "10.25.0.7:50002",
+            "remote": "10.25.0.5:50000"
+          },
+          "isd_as": "1-5",
+          "link_to": "PEER",
+          "mtu": 1500,
+          "mcast": true,
+          "remote_interface_id": 14
         },
         "85": {
           "underlay": {
@@ -129,9 +129,19 @@
     "router31": {
       "internal_addr": "10.7.0.250:30042",
       "interfaces": {
-        "127": {
+        "1": {
           "underlay": {
             "local": "10.31.0.7:50000",
+            "remote": "10.31.0.3:50000"
+          },
+          "isd_as": "1-3",
+          "link_to": "PARENT",
+          "mtu": 1500,
+          "mcast": true
+        },
+        "127": {
+          "underlay": {
+            "local": "10.31.0.7:50001",
             "remote": "10.31.0.13:50000"
           },
           "isd_as": "1-13",
@@ -139,16 +149,6 @@
           "mtu": 1500,
           "mcast": true,
           "remote_interface_id": 5491
-        },
-        "1": {
-          "underlay": {
-            "local": "10.31.0.7:50001",
-            "remote": "10.31.0.3:50000"
-          },
-          "isd_as": "1-3",
-          "link_to": "PARENT",
-          "mtu": 1500,
-          "mcast": true
         }
       }
     },
@@ -171,9 +171,20 @@
     "router73": {
       "internal_addr": "10.7.0.248:30042",
       "interfaces": {
-        "126": {
+        "42": {
           "underlay": {
             "local": "10.73.0.7:50000",
+            "remote": "10.73.0.5:50000"
+          },
+          "isd_as": "1-5",
+          "link_to": "PEER",
+          "mtu": 1500,
+          "mcast": true,
+          "remote_interface_id": 10
+        },
+        "126": {
+          "underlay": {
+            "local": "10.73.0.7:50001",
             "remote": "10.73.0.13:50000"
           },
           "isd_as": "1-13",
@@ -181,17 +192,6 @@
           "mtu": 1500,
           "mcast": true,
           "remote_interface_id": 5490
-        },
-        "42": {
-          "underlay": {
-            "local": "10.73.0.7:50001",
-            "remote": "10.73.0.5:50001"
-          },
-          "isd_as": "1-5",
-          "link_to": "PEER",
-          "mtu": 1500,
-          "mcast": true,
-          "remote_interface_id": 10
         }
       }
     },
@@ -201,7 +201,7 @@
         "4": {
           "underlay": {
             "local": "10.42.0.7:50000",
-            "remote": "10.42.0.3:50002"
+            "remote": "10.42.0.3:50000"
           },
           "isd_as": "1-3",
           "link_to": "PEER",
@@ -209,27 +209,27 @@
           "mcast": true,
           "remote_interface_id": 5
         },
-        "44": {
-          "underlay": {
-            "local": "10.42.0.7:50001",
-            "remote": "10.42.0.5:50002"
-          },
-          "isd_as": "1-5",
-          "link_to": "PEER",
-          "mtu": 1500,
-          "mcast": true,
-          "remote_interface_id": 12
-        },
         "331": {
           "underlay": {
-            "local": "10.42.0.7:50002",
-            "remote": "10.42.0.4:50001"
+            "local": "10.42.0.7:50001",
+            "remote": "10.42.0.4:50000"
           },
           "isd_as": "1-4",
           "link_to": "PEER",
           "mtu": 1500,
           "mcast": true,
           "remote_interface_id": 19
+        },
+        "44": {
+          "underlay": {
+            "local": "10.42.0.7:50002",
+            "remote": "10.42.0.5:50000"
+          },
+          "isd_as": "1-5",
+          "link_to": "PEER",
+          "mtu": 1500,
+          "mcast": true,
+          "remote_interface_id": 12
         },
         "12": {
           "underlay": {
@@ -279,27 +279,27 @@
     "router47": {
       "internal_addr": "10.7.0.244:30042",
       "interfaces": {
-        "45": {
-          "underlay": {
-            "local": "10.47.0.7:50000",
-            "remote": "10.47.0.5:50002"
-          },
-          "isd_as": "1-5",
-          "link_to": "PEER",
-          "mtu": 1500,
-          "mcast": true,
-          "remote_interface_id": 13
-        },
         "333": {
           "underlay": {
-            "local": "10.47.0.7:50001",
-            "remote": "10.47.0.4:50001"
+            "local": "10.47.0.7:50000",
+            "remote": "10.47.0.4:50000"
           },
           "isd_as": "1-4",
           "link_to": "PEER",
           "mtu": 1500,
           "mcast": true,
           "remote_interface_id": 21
+        },
+        "45": {
+          "underlay": {
+            "local": "10.47.0.7:50001",
+            "remote": "10.47.0.5:50000"
+          },
+          "isd_as": "1-5",
+          "link_to": "PEER",
+          "mtu": 1500,
+          "mcast": true,
+          "remote_interface_id": 13
         }
       }
     },

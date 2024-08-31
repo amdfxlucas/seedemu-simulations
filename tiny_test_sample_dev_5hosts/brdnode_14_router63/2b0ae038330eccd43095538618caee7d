@@ -1,5 +1,5 @@
 log "/var/log/bird.log" all;
-router id 10.0.0.8;
+router id 10.0.0.14;
 ipv4 table t_direct;
 protocol device {
 }
@@ -43,12 +43,12 @@ protocol static static1 {
    route 10.0.0.5/32 via 10.14.0.250;
    route 10.0.0.6/32 via 10.14.0.249;
    route 10.0.0.7/32 via 10.14.0.248;
+   route 10.0.0.8/32 via 10.14.0.247;
    route 10.0.0.9/32 via 10.14.0.246;
    route 10.0.0.10/32 via 10.14.0.245;
    route 10.0.0.11/32 via 10.14.0.244;
    route 10.0.0.12/32 via 10.14.0.243;
    route 10.0.0.13/32 via 10.14.0.242;
-   route 10.0.0.14/32 via 10.14.0.241;
    route 0.0.0.0/0 via  10.14.0.1;
 }
 

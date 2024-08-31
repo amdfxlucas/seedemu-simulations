@@ -15,7 +15,6 @@ COPY 17ac2d812a99a91e7f747e1defb72a29 /seedemu_worker
 RUN chmod +x /start.sh
 RUN chmod +x /seedemu_sniffer
 RUN chmod +x /seedemu_worker
-COPY a467daa90b75ef370d53cd9a11e81e0a /etc/scion/staticInfoConfig.json
 COPY 5f4bd96e3756e399ecc9c87b375bd33f /etc/scion/mhfa/2.json
 COPY 4d8881d9167fd4d375432d00549eb502 /etc/scion/mhfa/3.json
 COPY 6249ba944671dbde8603b588b492dcfc /etc/scion/mhfa/4.json
@@ -36,6 +35,7 @@ COPY 552f01f4bf3d252f6a6c2af55d8d5bf2 /etc/scion/topology.json
 COPY ed9cd95c01e45d12908702c4e8cdd572 /etc/scion/sciond.toml
 COPY 29c09a041f16d78346d82b26bfc3c22c /etc/scion/dispatcher.toml
 COPY 0c8e67cc22b9439c8406714552537a0f /etc/scion/cs1.toml
+COPY a467daa90b75ef370d53cd9a11e81e0a /etc/scion/staticInfoConfig.json
 COPY 93561211238cd7e56baf344786d1d598 /etc/scion/crypto/as/ISD1-AS15.pem
 COPY 35f72d2ac7f78bc28e079aef85baaf05 /etc/scion/crypto/as/cp-as.key
 COPY 81e7dd8d0c88ff5d234d104f551647c9 /etc/scion/crypto/as/cp-as.tmpl

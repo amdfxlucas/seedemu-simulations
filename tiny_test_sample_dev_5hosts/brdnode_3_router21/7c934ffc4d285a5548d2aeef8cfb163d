@@ -6,7 +6,7 @@ config_dir = "/etc/scion"
 level = "debug"
 
 [metrics]
-prometheus = "10.3.0.252:30442"
+prometheus = "10.3.0.253:30442"
 
 [router]
 num_mcast_processors = 1

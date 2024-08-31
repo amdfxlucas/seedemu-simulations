@@ -1,15 +1,22 @@
 {
-
-"LinkType": {
-            "1": "multihop"
-}
-,
-
-    "Geo": {
-                   "1": {
-            "Latitude": 50.11552,
-            "Longitude": 8.68417
-        }
-           }
-
+  "Latency": {
+    "1": {}
+  },
+  "Bandwidth": {},
+  "LinkType": {
+    "1": "direct"
+  },
+  "Geo": {
+    "1": {
+      "Latitude": "50.11552",
+      "Longitude": "8.68417",
+      "Address": "Go Asia, 90, Zeil, 60313, Zeil, Frankfurt am Main, Hessen, Deutschland"
+    }
+  },
+  "Hops": {
+    "1": {
+      "Intra": {}
+    }
+  },
+  "Note": "62454"
 }

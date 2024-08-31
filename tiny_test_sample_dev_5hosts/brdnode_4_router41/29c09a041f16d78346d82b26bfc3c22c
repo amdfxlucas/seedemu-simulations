@@ -3,5 +3,5 @@ id = "dispatcher"
 
 
 [metrics]
-prometheus = "10.4.0.248:30441"
+prometheus = "10.4.0.245:30441"
 

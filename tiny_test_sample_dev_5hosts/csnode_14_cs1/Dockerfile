@@ -15,7 +15,6 @@ COPY 17ac2d812a99a91e7f747e1defb72a29 /seedemu_worker
 RUN chmod +x /start.sh
 RUN chmod +x /seedemu_sniffer
 RUN chmod +x /seedemu_worker
-COPY a467daa90b75ef370d53cd9a11e81e0a /etc/scion/staticInfoConfig.json
 COPY 5f4bd96e3756e399ecc9c87b375bd33f /etc/scion/mhfa/2.json
 COPY 4d8881d9167fd4d375432d00549eb502 /etc/scion/mhfa/3.json
 COPY 6249ba944671dbde8603b588b492dcfc /etc/scion/mhfa/4.json
@@ -36,6 +35,7 @@ COPY 552f01f4bf3d252f6a6c2af55d8d5bf2 /etc/scion/topology.json
 COPY ed9cd95c01e45d12908702c4e8cdd572 /etc/scion/sciond.toml
 COPY 29c09a041f16d78346d82b26bfc3c22c /etc/scion/dispatcher.toml
 COPY 0c8e67cc22b9439c8406714552537a0f /etc/scion/cs1.toml
+COPY a467daa90b75ef370d53cd9a11e81e0a /etc/scion/staticInfoConfig.json
 COPY 3c60d339b768e3ea4e8ef9254f3cb2d4 /etc/scion/crypto/voting/ISD1-AS14.sensitive.crt
 COPY 02a7b1abfe11ea281314336cae40c186 /etc/scion/crypto/voting/sensitive-voting.key
 COPY 202070c260972fd0ced2e66e4c1156a6 /etc/scion/crypto/voting/sensitive.tmpl

@@ -1,15 +1,22 @@
 {
-
-"LinkType": {
-            "1": "multihop"
-}
-,
-
-    "Geo": {
-                   "1": {
-            "Latitude": 39.162,
-            "Longitude": -84.45689
-        }
-           }
-
+  "Latency": {
+    "1": {}
+  },
+  "Bandwidth": {},
+  "LinkType": {
+    "1": "direct"
+  },
+  "Geo": {
+    "1": {
+      "Latitude": "39.162",
+      "Longitude": "-84.45689",
+      "Address": "2101, Elm Avenue, 45212, Elm Avenue, Norwood, Ohio, United States"
+    }
+  },
+  "Hops": {
+    "1": {
+      "Intra": {}
+    }
+  },
+  "Note": "14909"
 }
