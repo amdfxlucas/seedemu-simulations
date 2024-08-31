@@ -1,7 +1,0 @@
-[dispatcher]
-id = "dispatcher"
-
-
-[metrics]
-prometheus = "10.10.0.76:30441"
-
