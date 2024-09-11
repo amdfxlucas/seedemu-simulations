@@ -311,7 +311,7 @@ networks:
 
     net_ix_ix49:
         external:
-            name: sim_ix_net_ix_ix49
+            name: tiny_test_ix_net_ix_ix49
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -321,7 +321,7 @@ networks:
 
     net_ix_ix21:
         external:
-            name: sim_ix_net_ix_ix21
+            name: tiny_test_ix_net_ix_ix21
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -331,7 +331,7 @@ networks:
 
     net_ix_ix50:
         external:
-            name: sim_ix_net_ix_ix50
+            name: tiny_test_ix_net_ix_ix50
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -341,7 +341,7 @@ networks:
 
     net_ix_ix149:
         external:
-            name: sim_ix_net_ix_ix149
+            name: tiny_test_ix_net_ix_ix149
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -351,7 +351,7 @@ networks:
 
     net_ix_ix41:
         external:
-            name: sim_ix_net_ix_ix41
+            name: tiny_test_ix_net_ix_ix41
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -361,7 +361,7 @@ networks:
 
     net_ix_ix113:
         external:
-            name: sim_ix_net_ix_ix113
+            name: tiny_test_ix_net_ix_ix113
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -371,7 +371,7 @@ networks:
 
     net_ix_ix18:
         external:
-            name: sim_ix_net_ix_ix18
+            name: tiny_test_ix_net_ix_ix18
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -381,7 +381,7 @@ networks:
 
     net_ix_ix57:
         external:
-            name: sim_ix_net_ix_ix57
+            name: tiny_test_ix_net_ix_ix57
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -391,7 +391,7 @@ networks:
 
     net_ix_ix25:
         external:
-            name: sim_ix_net_ix_ix25
+            name: tiny_test_ix_net_ix_ix25
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -401,7 +401,7 @@ networks:
 
     net_ix_ix51:
         external:
-            name: sim_ix_net_ix_ix51
+            name: tiny_test_ix_net_ix_ix51
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -411,7 +411,7 @@ networks:
 
     net_ix_ix31:
         external:
-            name: sim_ix_net_ix_ix31
+            name: tiny_test_ix_net_ix_ix31
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -421,7 +421,7 @@ networks:
 
     net_ix_ix130:
         external:
-            name: sim_ix_net_ix_ix130
+            name: tiny_test_ix_net_ix_ix130
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -431,7 +431,7 @@ networks:
 
     net_ix_ix73:
         external:
-            name: sim_ix_net_ix_ix73
+            name: tiny_test_ix_net_ix_ix73
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -441,7 +441,7 @@ networks:
 
     net_ix_ix42:
         external:
-            name: sim_ix_net_ix_ix42
+            name: tiny_test_ix_net_ix_ix42
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -451,7 +451,7 @@ networks:
 
     net_ix_ix40:
         external:
-            name: sim_ix_net_ix_ix40
+            name: tiny_test_ix_net_ix_ix40
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -461,7 +461,7 @@ networks:
 
     net_ix_ix43:
         external:
-            name: sim_ix_net_ix_ix43
+            name: tiny_test_ix_net_ix_ix43
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -471,7 +471,7 @@ networks:
 
     net_ix_ix78:
         external:
-            name: sim_ix_net_ix_ix78
+            name: tiny_test_ix_net_ix_ix78
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -481,7 +481,7 @@ networks:
 
     net_ix_ix47:
         external:
-            name: sim_ix_net_ix_ix47
+            name: tiny_test_ix_net_ix_ix47
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -491,7 +491,7 @@ networks:
 
     net_ix_ix48:
         external:
-            name: sim_ix_net_ix_ix48
+            name: tiny_test_ix_net_ix_ix48
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -501,7 +501,7 @@ networks:
 
     net_ix_ix118:
         external:
-            name: sim_ix_net_ix_ix118
+            name: tiny_test_ix_net_ix_ix118
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -511,7 +511,7 @@ networks:
 
     net_ix_ix23:
         external:
-            name: sim_ix_net_ix_ix23
+            name: tiny_test_ix_net_ix_ix23
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -521,7 +521,7 @@ networks:
 
     net_ix_ix64:
         external:
-            name: sim_ix_net_ix_ix64
+            name: tiny_test_ix_net_ix_ix64
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -531,7 +531,7 @@ networks:
 
     net_ix_ix65:
         external:
-            name: sim_ix_net_ix_ix65
+            name: tiny_test_ix_net_ix_ix65
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -541,7 +541,7 @@ networks:
 
     net_ix_ix30:
         external:
-            name: sim_ix_net_ix_ix30
+            name: tiny_test_ix_net_ix_ix30
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
@@ -551,7 +551,7 @@ networks:
 
     net_ix_ix63:
         external:
-            name: sim_ix_net_ix_ix63
+            name: tiny_test_ix_net_ix_ix63
         driver: overlay
         labels:
             org.seedsecuritylabs.seedemu.meta.type: "global"
