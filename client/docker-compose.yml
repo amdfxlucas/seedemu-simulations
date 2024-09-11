@@ -4,7 +4,7 @@ services:
         image: amdfxlucas/seedemu_client
         container_name: seedemu_client
         deploy:
-          replicas: 0 
+          replicas: 1 
           placement: 
             constraints: 
               - node.role == manager
