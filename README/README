@@ -1,0 +1,36 @@
+this is the DistributedDocker() build of tiny_test sim for docker swarm deployment.
+
+
+This simulation is generated from the 'tiny_test_sample_multi.gml' GML topology file.
+
+Which in turn is generated from the 'full_geo_rel.xml' CAIDA dataset (11182x ASes,diameter 11, connected graph)
+by selecting 5x ASes (hypothetic multicast capable 'terminals' )at random,
+(namely: 33154, 62454, 14909, 5564, 23467 )
+and adding just as much other ASes from the dataset (that forward the traffic between them)
+for the graph to be connected (so the 5x ASes can communicate with each other)
+The resulting graph has only diameter 4.
+A minimum steiner tree that connects the 5x terminals has 9x edges.
+
+provider = GMLDataProvider("examples/scion/S07-multicast/tiny_test_sample_multi.gml")
+
+The mapping of real world ASN to AS-Aliases is as follows:
+'33154': 2
+'62454': 10
+'14909': 15
+'5564':  12
+'23467': 8
+
+
+'2914':  3
+'13030': 4
+'3303':  5
+'553':   6
+'42':    7
+'559':   9
+'1239':  11
+'6939':  13
+'3356':  14
+
+
+In the simulation AS 1-14 serves as the Core AS of the ISD '1' to which all ASes belong.
+(this is due to a limitation of seed-emulator, which as of writing only supports a single ISD) 
