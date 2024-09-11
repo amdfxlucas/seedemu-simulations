@@ -1,0 +1,420 @@
+services:
+    39e016aa9e819f203ebc1809245a5818:
+        build:
+            context: .
+            dockerfile: dummies/39e016aa9e819f203ebc1809245a5818
+        image: amdfxlucas/39e016aa9e819f203ebc1809245a5818
+
+    98a2693c996c2294358552f48373498d:
+        build:
+            context: .
+            dockerfile: dummies/98a2693c996c2294358552f48373498d
+        image: amdfxlucas/98a2693c996c2294358552f48373498d
+
+
+    hnode_8_host8_0:
+        build: 
+            context: ../
+            dockerfile: ./8/hnode_8_host8_0/Dockerfile
+        image: amdfxlucas/hnode_8_host8_0
+        container_name: as8h-host8_0-10.8.0.72
+
+        deploy:
+            replicas: 1 
+            placement: 
+                constraints: 
+                  - node.role == worker
+
+        cap_add:
+            - ALL
+        security_opt:
+            - seccomp:unconfined
+            - apparmor:unconfined
+        sysctls:
+            - net.ipv4.ip_forward=1
+            - net.ipv4.conf.default.rp_filter=0
+            - net.ipv4.conf.all.rp_filter=0
+            - net.ipv4.udp_rmem_min=${HOST_UDP_RMEM_MIN}
+            - net.ipv4.udp_wmem_min=${HOST_UDP_RMEM_MIN}
+        privileged: true
+        networks:
+            net_8_net0:
+                ipv4_address: 10.8.0.72
+
+        volumes:
+        - type: bind
+          source: /etc/localtime
+          target: /etc/localtime
+          read_only: true
+        
+        labels:
+            org.seedsecuritylabs.seedemu.meta.asn: "8"
+            org.seedsecuritylabs.seedemu.meta.nodename: "host8_0"
+            org.seedsecuritylabs.seedemu.meta.role: "Host"
+            org.seedsecuritylabs.seedemu.meta.class: "[\"ScionMcastEndpoint\"]"
+            org.seedsecuritylabs.seedemu.meta.scion_address: "1-8,10.8.0.72"
+            org.seedsecuritylabs.seedemu.meta.net.0.name: "net0"
+            org.seedsecuritylabs.seedemu.meta.net.0.address: "10.8.0.72/24"
+
+        environment:
+            - CONTAINER_NAME=as8h-host8_0-10.8.0.72
+            - LOGLEVEL=${LOGLEVEL}
+    brdnode_8_router57:
+        build: 
+            context: ../
+            dockerfile: ./8/brdnode_8_router57/Dockerfile
+        image: amdfxlucas/brdnode_8_router57
+        container_name: as8brd-router57-10.8.0.254
+
+        deploy:
+            replicas: 1 
+            placement: 
+                constraints: 
+                  - node.role == worker
+
+        cap_add:
+            - ALL
+        security_opt:
+            - seccomp:unconfined
+            - apparmor:unconfined
+        sysctls:
+            - net.ipv4.ip_forward=1
+            - net.ipv4.conf.default.rp_filter=0
+            - net.ipv4.conf.all.rp_filter=0
+            - net.ipv4.udp_rmem_min=${BORDER_ROUTER_UDP_RMEM_MIN}
+            - net.ipv4.udp_wmem_min=${BORDER_ROUTER_UDP_RMEM_MIN}
+        privileged: true
+        networks:
+            net_8_net0:
+                ipv4_address: 10.8.0.254
+
+            net_ix_ix57:
+                ipv4_address: 10.57.0.8
+
+
+        labels:
+            org.seedsecuritylabs.seedemu.meta.asn: "8"
+            org.seedsecuritylabs.seedemu.meta.nodename: "router57"
+            org.seedsecuritylabs.seedemu.meta.role: "BorderRouter"
+            org.seedsecuritylabs.seedemu.meta.net.0.name: "net0"
+            org.seedsecuritylabs.seedemu.meta.net.0.address: "10.8.0.254/24"
+            org.seedsecuritylabs.seedemu.meta.net.1.name: "ix57"
+            org.seedsecuritylabs.seedemu.meta.net.1.address: "10.57.0.8/24"
+
+        environment:
+            - CONTAINER_NAME=as8brd-router57-10.8.0.254
+            - LOGLEVEL=${LOGLEVEL}
+            - DISABLE_BFD=${DISABLE_BFD}
+            - EXPERIMENTAL_SCMP=${EXPERIMENTAL_SCMP_8}
+            - EXPERIMENTAL_MCAST=${EXPERIMENTAL_MCAST_8}
+    csnode_8_cs1:
+        build: 
+            context: ../
+            dockerfile: ./8/csnode_8_cs1/Dockerfile
+        image: amdfxlucas/csnode_8_cs1
+        container_name: as8cs-cs1-10.8.0.71
+
+        deploy:
+            replicas: 1 
+            placement: 
+                constraints: 
+                  - node.role == worker
+
+        cap_add:
+            - ALL
+        security_opt:
+            - seccomp:unconfined
+            - apparmor:unconfined
+        sysctls:
+            - net.ipv4.ip_forward=1
+            - net.ipv4.conf.default.rp_filter=0
+            - net.ipv4.conf.all.rp_filter=0
+            - net.ipv4.udp_rmem_min=${CONTROL_SERVICE_UDP_RMEM_MIN}
+            - net.ipv4.udp_wmem_min=${CONTROL_SERVICE_UDP_RMEM_MIN}
+        privileged: true
+        networks:
+            net_8_net0:
+                ipv4_address: 10.8.0.71
+
+
+        labels:
+            org.seedsecuritylabs.seedemu.meta.asn: "8"
+            org.seedsecuritylabs.seedemu.meta.nodename: "cs1"
+            org.seedsecuritylabs.seedemu.meta.role: "SCION Control Service"
+            org.seedsecuritylabs.seedemu.meta.scion_address: "1-8,10.8.0.71"
+            org.seedsecuritylabs.seedemu.meta.net.0.name: "net0"
+            org.seedsecuritylabs.seedemu.meta.net.0.address: "10.8.0.71/24"
+
+        environment:
+            - CONTAINER_NAME=as8cs-cs1-10.8.0.71
+            - LOGLEVEL=${LOGLEVEL}
+            - EXPERIMENTAL_SCMP=${EXPERIMENTAL_SCMP_8}
+            - EXPERIMENTAL_MCAST=${EXPERIMENTAL_MCAST_8}
+            - BOOTSTRAP_PEERS=/scion/1-14/ip4/10.14.0.71/udp/7777/quic-v1/p2p/QmTYbDk14TSL1hBuqK2JUuZMatcaTburZBAaQRVwdFk4yD;/scion/1-11/ip4/10.11.0.71/udp/7777/quic-v1/p2p/QmcXPPmpr5P7abEW1yXx5nXxQjmpEVBLmyt5Gq9namzQTJ;/scion/1-3/ip4/10.3.0.71/udp/7777/quic-v1/p2p/QmU54xaT1wD4FqCzM76xKQugpXhdbnc1KkTDEyg8crzSrR;/scion/1-4/ip4/10.4.0.71/udp/7777/quic-v1/p2p/QmWaqYQro5WwrhEhLBEZgdJQYAHEAHaPD4XaWzx2toLkpr;/scion/1-9/ip4/10.9.0.71/udp/7777/quic-v1/p2p/QmVpBy74LPFHsGrvouTuwak2hefBjXnrvFmoBxNzev4gNd;/scion/1-5/ip4/10.5.0.71/udp/7777/quic-v1/p2p/QmVh7cpkhhrtpMdSYHBj1ayKNT8K7MSuG8xbeDYpoRGprH;/scion/1-13/ip4/10.13.0.71/udp/7777/quic-v1/p2p/QmYNAqeXe6w4JR4HYuTtv2N1aMYKA5mRYVzXLcF8nyaooP;/scion/1-7/ip4/10.7.0.71/udp/7777/quic-v1/p2p/QmWNYCZNoSVMJx47FfgvGuGJo14GwAHh8sUJP5VrdsrZvN;/scion/1-12/ip4/10.12.0.71/udp/7777/quic-v1/p2p/QmS6oQ18Thmb2EGUpYJkefLzSvqdjnohSbbJmAPkBs9P1B;/scion/1-10/ip4/10.10.0.71/udp/7777/quic-v1/p2p/QmQzyviJc51pNrk6bLt74veY9Wbh8CAz3krRojxV1q2G4A;/scion/1-6/ip4/10.6.0.71/udp/7777/quic-v1/p2p/QmVPxgfqwbmrAKBt7LZMPrh44d4rk9Tnh5XMu56muZXbmV;/scion/1-2/ip4/10.2.0.71/udp/7777/quic-v1/p2p/QmSEWSzGJn3dBwJXmVi2s2ut6cz8Jc7NB1fnuswaziQe45;/scion/1-15/ip4/10.15.0.71/udp/7777/quic-v1/p2p/QmQhmLbWmXQF2KAMH8LecrsCRpph4PXJqgn9LLopoEA7dp
+
+networks:
+    net_8_net0:
+        driver_opts:
+            com.docker.network.driver.mtu: 1500
+        ipam:
+            config:
+                - subnet: 10.8.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "local"
+            org.seedsecuritylabs.seedemu.meta.scope: "8"
+            org.seedsecuritylabs.seedemu.meta.name: "net0"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.8.0.0/24"
+
+    net_ix_ix49:
+        external:
+            name: sim_ix_net_ix_ix49
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix49"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.49.0.0/24"
+
+    net_ix_ix21:
+        external:
+            name: sim_ix_net_ix_ix21
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix21"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.21.0.0/24"
+
+    net_ix_ix50:
+        external:
+            name: sim_ix_net_ix_ix50
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix50"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.50.0.0/24"
+
+    net_ix_ix149:
+        external:
+            name: sim_ix_net_ix_ix149
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix149"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.149.0.0/24"
+
+    net_ix_ix41:
+        external:
+            name: sim_ix_net_ix_ix41
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix41"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.41.0.0/24"
+
+    net_ix_ix113:
+        external:
+            name: sim_ix_net_ix_ix113
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix113"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.113.0.0/24"
+
+    net_ix_ix18:
+        external:
+            name: sim_ix_net_ix_ix18
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix18"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.18.0.0/24"
+
+    net_ix_ix57:
+        external:
+            name: sim_ix_net_ix_ix57
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix57"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.57.0.0/24"
+
+    net_ix_ix25:
+        external:
+            name: sim_ix_net_ix_ix25
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix25"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.25.0.0/24"
+
+    net_ix_ix51:
+        external:
+            name: sim_ix_net_ix_ix51
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix51"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.51.0.0/24"
+
+    net_ix_ix31:
+        external:
+            name: sim_ix_net_ix_ix31
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix31"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.31.0.0/24"
+
+    net_ix_ix130:
+        external:
+            name: sim_ix_net_ix_ix130
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix130"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.130.0.0/24"
+
+    net_ix_ix73:
+        external:
+            name: sim_ix_net_ix_ix73
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix73"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.73.0.0/24"
+
+    net_ix_ix42:
+        external:
+            name: sim_ix_net_ix_ix42
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix42"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.42.0.0/24"
+
+    net_ix_ix40:
+        external:
+            name: sim_ix_net_ix_ix40
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix40"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.40.0.0/24"
+
+    net_ix_ix43:
+        external:
+            name: sim_ix_net_ix_ix43
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix43"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.43.0.0/24"
+
+    net_ix_ix78:
+        external:
+            name: sim_ix_net_ix_ix78
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix78"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.78.0.0/24"
+
+    net_ix_ix47:
+        external:
+            name: sim_ix_net_ix_ix47
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix47"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.47.0.0/24"
+
+    net_ix_ix48:
+        external:
+            name: sim_ix_net_ix_ix48
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix48"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.48.0.0/24"
+
+    net_ix_ix118:
+        external:
+            name: sim_ix_net_ix_ix118
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix118"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.118.0.0/24"
+
+    net_ix_ix23:
+        external:
+            name: sim_ix_net_ix_ix23
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix23"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.23.0.0/24"
+
+    net_ix_ix64:
+        external:
+            name: sim_ix_net_ix_ix64
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix64"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.64.0.0/24"
+
+    net_ix_ix65:
+        external:
+            name: sim_ix_net_ix_ix65
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix65"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.65.0.0/24"
+
+    net_ix_ix30:
+        external:
+            name: sim_ix_net_ix_ix30
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix30"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.30.0.0/24"
+
+    net_ix_ix63:
+        external:
+            name: sim_ix_net_ix_ix63
+        driver: overlay
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix63"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.63.0.0/24"
+
+
+
+

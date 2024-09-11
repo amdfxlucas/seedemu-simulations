@@ -1,0 +1,280 @@
+
+networks:
+    net_ix_ix49:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.49.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix49"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.49.0.0/24"
+
+    net_ix_ix21:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.21.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix21"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.21.0.0/24"
+
+    net_ix_ix50:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.50.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix50"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.50.0.0/24"
+
+    net_ix_ix149:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.149.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix149"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.149.0.0/24"
+
+    net_ix_ix41:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.41.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix41"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.41.0.0/24"
+
+    net_ix_ix113:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.113.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix113"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.113.0.0/24"
+
+    net_ix_ix18:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.18.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix18"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.18.0.0/24"
+
+    net_ix_ix57:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.57.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix57"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.57.0.0/24"
+
+    net_ix_ix25:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.25.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix25"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.25.0.0/24"
+
+    net_ix_ix51:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.51.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix51"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.51.0.0/24"
+
+    net_ix_ix31:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.31.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix31"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.31.0.0/24"
+
+    net_ix_ix130:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.130.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix130"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.130.0.0/24"
+
+    net_ix_ix73:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.73.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix73"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.73.0.0/24"
+
+    net_ix_ix42:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.42.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix42"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.42.0.0/24"
+
+    net_ix_ix40:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.40.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix40"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.40.0.0/24"
+
+    net_ix_ix43:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.43.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix43"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.43.0.0/24"
+
+    net_ix_ix78:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.78.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix78"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.78.0.0/24"
+
+    net_ix_ix47:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.47.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix47"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.47.0.0/24"
+
+    net_ix_ix48:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.48.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix48"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.48.0.0/24"
+
+    net_ix_ix118:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.118.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix118"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.118.0.0/24"
+
+    net_ix_ix23:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.23.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix23"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.23.0.0/24"
+
+    net_ix_ix64:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.64.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix64"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.64.0.0/24"
+
+    net_ix_ix65:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.65.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix65"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.65.0.0/24"
+
+    net_ix_ix30:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.30.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix30"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.30.0.0/24"
+
+    net_ix_ix63:
+        driver: overlay
+        ipam:
+            config:
+                - subnet: 10.63.0.0/24
+        labels:
+            org.seedsecuritylabs.seedemu.meta.type: "global"
+            org.seedsecuritylabs.seedemu.meta.scope: "ix"
+            org.seedsecuritylabs.seedemu.meta.name: "ix63"
+            org.seedsecuritylabs.seedemu.meta.prefix: "10.63.0.0/24"
+
+
+
+

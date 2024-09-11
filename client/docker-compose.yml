@@ -1,0 +1,32 @@
+services:
+  seedemu-client:
+        image: amdfxlucas/seedemu_client
+        container_name: seedemu_client
+        deploy:
+          replicas: 1 
+          placement: 
+            constraints: 
+              - node.role == manager
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - type: volume
+              target: /var/lib/grafana
+              source: grafana-storage
+            - type: bind
+              source: /etc/localtime
+              target: /etc/localtime
+              read_only: true
+            - type: volume
+              source: prometheus-data
+              target: /prometheus
+           
+        ports:
+            - 8080:8080
+            - 9090:9090 # prometheus
+            - 3000:3000 # grafana
+
+volumes:
+  prometheus-data:
+        name: prometheus-data
+  grafana-storage:
+        name: grafana-storage
