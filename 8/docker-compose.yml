@@ -20,7 +20,7 @@ services:
         container_name: as8h-host8_0-10.8.0.72
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -67,7 +67,7 @@ services:
         container_name: as8brd-router57-10.8.0.254
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -115,7 +115,7 @@ services:
         container_name: as8cs-cs1-10.8.0.71
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker

@@ -20,7 +20,7 @@ services:
         container_name: as6h-host6_0-10.6.0.72
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -67,7 +67,7 @@ services:
         container_name: as6brd-router42-10.6.0.254
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -115,7 +115,7 @@ services:
         container_name: as6brd-router40-10.6.0.253
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -163,7 +163,7 @@ services:
         container_name: as6cs-cs1-10.6.0.71
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker

@@ -20,7 +20,7 @@ services:
         container_name: as10h-host10_0-10.10.0.72
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -67,7 +67,7 @@ services:
         container_name: as10brd-router42-10.10.0.254
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -115,7 +115,7 @@ services:
         container_name: as10cs-cs1-10.10.0.71
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker

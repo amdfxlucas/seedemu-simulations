@@ -1,9 +1,10 @@
+name: tiny_test
 services:
   seedemu-client:
         image: amdfxlucas/seedemu_client
         container_name: seedemu_client
         deploy:
-          replicas: 1 
+          replicas: 0 
           placement: 
             constraints: 
               - node.role == manager

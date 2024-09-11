@@ -20,7 +20,7 @@ services:
         container_name: as13h-host13_0-10.13.0.72
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -67,7 +67,7 @@ services:
         container_name: as13brd-router113-10.13.0.254
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -115,7 +115,7 @@ services:
         container_name: as13brd-router18-10.13.0.253
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -163,7 +163,7 @@ services:
         container_name: as13brd-router57-10.13.0.252
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -211,7 +211,7 @@ services:
         container_name: as13brd-router25-10.13.0.251
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -259,7 +259,7 @@ services:
         container_name: as13brd-router31-10.13.0.250
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -307,7 +307,7 @@ services:
         container_name: as13brd-router73-10.13.0.249
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -355,7 +355,7 @@ services:
         container_name: as13brd-router42-10.13.0.248
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -403,7 +403,7 @@ services:
         container_name: as13brd-router43-10.13.0.247
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -451,7 +451,7 @@ services:
         container_name: as13brd-router21-10.13.0.246
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -499,7 +499,7 @@ services:
         container_name: as13brd-router118-10.13.0.245
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -547,7 +547,7 @@ services:
         container_name: as13brd-router23-10.13.0.244
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -595,7 +595,7 @@ services:
         container_name: as13brd-router64-10.13.0.243
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -643,7 +643,7 @@ services:
         container_name: as13brd-router65-10.13.0.242
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -691,7 +691,7 @@ services:
         container_name: as13brd-router130-10.13.0.241
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -739,7 +739,7 @@ services:
         container_name: as13brd-router78-10.13.0.240
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -787,7 +787,7 @@ services:
         container_name: as13brd-router47-10.13.0.239
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
@@ -835,7 +835,7 @@ services:
         container_name: as13cs-cs1-10.13.0.71
 
         deploy:
-            replicas: 1 
+            replicas: 0 
             placement: 
                 constraints: 
                   - node.role == worker
