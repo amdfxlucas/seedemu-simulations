@@ -19,11 +19,11 @@ export $(cat ./10/.env );envsubst < ./10/docker-compose.yml > ./10/_docker-compo
 #export $(cat ./15/.env );envsubst < ./15/docker-compose.yml > ./15/_docker-compose.yml
 
 
-docker compose up -f ./6/_docker-compose.yml \
+docker compose  -f ./6/_docker-compose.yml \
 -f ./7/_docker-compose.yml \
 -f ./8/_docker-compose.yml \
 -f ./9/_docker-compose.yml \
--f ./10/_docker-compose.yml 
+-f ./10/_docker-compose.yml  up
 #-c ./11/_docker-compose.yml \
 #-c ./12/_docker-compose.yml \
 #-c ./13/_docker-compose.yml \
