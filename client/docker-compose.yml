@@ -5,10 +5,12 @@ services:
         container_name: seedemu_client
         deploy:
           replicas: 1 
-            endpoint_mode: dnsrr 
+          #mode: global
+          endpoint_mode: dnsrr 
           placement: 
             constraints: 
               - node.role == manager
+
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - type: volume
