@@ -24,7 +24,7 @@ services:
             endpoint_mode: dnsrr 
             placement: 
                 constraints: 
-                  - node.role == worker
+                  - node.role == manager
 
         cap_add:
             - ALL
@@ -72,7 +72,7 @@ services:
             endpoint_mode: dnsrr 
             placement: 
                 constraints: 
-                  - node.role == worker
+                  - node.role == manager
 
         cap_add:
             - ALL
@@ -121,7 +121,7 @@ services:
             endpoint_mode: dnsrr 
             placement: 
                 constraints: 
-                  - node.role == worker
+                  - node.role == manager
 
         cap_add:
             - ALL
@@ -170,7 +170,7 @@ services:
             endpoint_mode: dnsrr 
             placement: 
                 constraints: 
-                  - node.role == worker
+                  - node.role == manager
 
         cap_add:
             - ALL
@@ -219,7 +219,7 @@ services:
             endpoint_mode: dnsrr 
             placement: 
                 constraints: 
-                  - node.role == worker
+                  - node.role == manager
 
         cap_add:
             - ALL
@@ -268,7 +268,7 @@ services:
             endpoint_mode: dnsrr 
             placement: 
                 constraints: 
-                  - node.role == worker
+                  - node.role == manager
 
         cap_add:
             - ALL
