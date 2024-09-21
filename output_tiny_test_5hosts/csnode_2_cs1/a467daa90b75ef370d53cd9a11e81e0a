@@ -1,0 +1,22 @@
+{
+  "Latency": {
+    "1": {}
+  },
+  "Bandwidth": {},
+  "LinkType": {
+    "1": "direct"
+  },
+  "Geo": {
+    "1": {
+      "Latitude": 39.29038,
+      "Longitude": -76.61219,
+      "Address": ""
+    }
+  },
+  "Hops": {
+    "1": {
+      "Intra": {}
+    }
+  },
+  "Note": "33154"
+}

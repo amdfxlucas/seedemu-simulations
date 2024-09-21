@@ -1,0 +1,7 @@
+[dispatcher]
+id = "dispatcher"
+
+
+[metrics]
+prometheus = "10.11.0.72:30441"
+

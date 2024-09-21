@@ -1,0 +1,51 @@
+log "/var/log/bird.log" all;
+router id 10.0.0.82;
+ipv4 table t_direct;
+protocol device {
+}
+protocol kernel {
+    ipv4 {
+        import all;
+        export all;
+    };
+    learn;
+}
+protocol direct local_nets {
+    ipv4 {
+        table t_direct;
+        import all;
+    };
+
+    interface "net0";
+
+    interface "ix18";
+
+}
+ipv4 table t_static;
+protocol pipe {
+    table t_static;
+    peer table master4;
+    import none;
+    export all;
+}
+protocol static static1 {
+    debug all;
+    ipv4 {
+        table t_static;
+        import all;
+        export none;
+    };
+   route 10.7.0.0/24 via "net0"; 
+   route 10.0.0.81/32 via 10.7.0.254;
+   route 10.0.0.83/32 via 10.7.0.252;
+   route 10.0.0.84/32 via 10.7.0.251;
+   route 10.0.0.85/32 via 10.7.0.250;
+   route 10.0.0.86/32 via 10.7.0.249;
+   route 10.0.0.87/32 via 10.7.0.248;
+   route 10.0.0.88/32 via 10.7.0.247;
+   route 10.0.0.89/32 via 10.7.0.246;
+   route 10.0.0.90/32 via 10.7.0.245;
+   route 10.0.0.91/32 via 10.7.0.244;
+   route 10.0.0.92/32 via 10.7.0.243;
+}
+

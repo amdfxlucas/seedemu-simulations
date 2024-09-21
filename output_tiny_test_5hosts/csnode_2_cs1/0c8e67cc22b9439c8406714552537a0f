@@ -1,0 +1,27 @@
+[general]
+id = "cs1"
+config_dir = "/etc/scion"
+
+[log.console]
+level = "${LOGLEVEL}"
+[trust_db]
+connection = "/cache/cs1.trust.db"
+
+[beacon_db]
+connection = "/cache/cs1.beacon.db"
+
+[path_db]
+connection = "/cache/cs1.path.db"
+
+
+[metrics]
+prometheus = "10.2.0.71:30452"
+
+[features]
+experimental_multicast=${EXPERIMENTAL_MCAST}
+[beaconing]
+origination_interval = "90s"
+propagation_interval = "90s"
+registration_interval = "90s"
+
+[beaconing.policies]

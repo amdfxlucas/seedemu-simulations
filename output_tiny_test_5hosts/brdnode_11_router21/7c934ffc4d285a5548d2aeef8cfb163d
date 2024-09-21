@@ -1,0 +1,19 @@
+[general]
+id = "router21"
+config_dir = "/etc/scion"
+
+[log.console]
+level = "${LOGLEVEL}"
+
+[metrics]
+prometheus = "10.11.0.247:30442"
+
+[router]
+num_mcast_processors = 1
+
+bfd.disable=${DISABLE_BFD}
+
+[features]
+experimental_multicast=${EXPERIMENTAL_MCAST}
+experimental_scmp_authentication=${EXPERIMENTAL_SCMP}
+

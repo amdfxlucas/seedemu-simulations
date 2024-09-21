@@ -1,0 +1,16 @@
+[general]
+id = "sd1"
+config_dir = "/etc/scion"
+
+[log.console]
+level = "${LOGLEVEL}"
+[trust_db]
+connection = "/cache/sd1.trust.db"
+
+[path_db]
+connection = "/cache/sd1.path.db"
+
+
+[metrics]
+prometheus = "10.3.0.247:30455"
+
